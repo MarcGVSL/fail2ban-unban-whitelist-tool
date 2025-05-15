@@ -67,3 +67,77 @@ Le script affichera :
 **MarcGVSL**
 Global VoIP Services Ltd
 [https://voipservices.online](https://voipservices.online)
+
+---
+
+# 🌐 English version
+
+## Fail2Ban Unban & Whitelist Tool
+
+This script allows you to:
+
+* Check if an IP is banned in any active Fail2Ban jail.
+* Unban it automatically if needed.
+* Add it to the whitelist (`ignoreip`) in `jail.local`.
+
+---
+
+## 🔧 Quick installation on any server
+
+**One-liner command:**
+
+```bash
+wget -O - https://raw.githubusercontent.com/MarcGVSL/fail2ban-unban-whitelist-tool/main/install.sh | bash
+```
+
+**Or in two steps:**
+
+```bash
+wget https://raw.githubusercontent.com/MarcGVSL/fail2ban-unban-whitelist-tool/main/install.sh
+chmod +x install.sh
+./install.sh
+```
+
+This will:
+
+* Download `unban_ip.sh` to `/usr/local/bin/`
+* Make it executable
+* Add the alias `unbanip` to your `.bashrc`
+
+---
+
+## 🚀 Usage
+
+```bash
+unbanip 194.32.76.109
+```
+
+The script will display:
+
+* Active jails
+* Whether the IP was banned
+* If it was unbanned
+* If it was added to the whitelist
+
+---
+
+## 📁 Files
+
+* `unban_ip.sh`: main script
+* `install.sh`: quick setup script
+
+---
+
+## 🔒 Requirements
+
+* Fail2Ban installed and running
+* Root access (`sudo`)
+* Tools: `bash`, `wget`, `grep`, `sed`, `systemctl`
+
+---
+
+## 👤 Author
+
+**MarcGVSL**
+Global VoIP Services Ltd
+[https://voipservices.online](https://voipservices.online)
