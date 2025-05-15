@@ -1,44 +1,69 @@
 # Fail2Ban Unban & Whitelist Tool
 
 Ce script permet de :
-- Vérifier si une IP est bannie par Fail2Ban dans un ou plusieurs jails.
-- La débannir automatiquement si nécessaire.
-- L’ajouter à la whitelist (`ignoreip`) dans `jail.local`.
+
+* Vérifier si une IP est bannie par Fail2Ban dans un ou plusieurs jails.
+* La débannir automatiquement si nécessaire.
+* L’ajouter à la whitelist (`ignoreip`) dans `jail.local`.
+
+---
 
 ## 🔧 Installation automatique sur n’importe quel serveur
 
-# Exécute simplement :
-wget -O - https://raw.githubusercontent.com/MarcGVSL/fail2ban-unban-whitelist-tool/main/install.sh | bash
+**Commande rapide :**
 
-# Ou en deux étapes :
+```bash
+wget -O - https://raw.githubusercontent.com/MarcGVSL/fail2ban-unban-whitelist-tool/main/install.sh | bash
+```
+
+**Ou en deux étapes :**
+
+```bash
 wget https://raw.githubusercontent.com/MarcGVSL/fail2ban-unban-whitelist-tool/main/install.sh
 chmod +x install.sh
 ./install.sh
+```
 
-# Cela :
-Télécharge unban_ip.sh dans /usr/local/bin/
-Le rend exécutable
-Crée un alias unbanip dans ton .bashrc
+Cela :
 
-# 🚀 Utilisation
+* Télécharge `unban_ip.sh` dans `/usr/local/bin/`
+* Le rend exécutable
+* Crée un alias `unbanip` dans `.bashrc`
+
+---
+
+## 🚀 Utilisation
+
+```bash
 unbanip 194.32.76.109
+```
 
-# Le script affichera :
-Les jails actifs
-Si l’IP était bannie
-Si elle a été débannie
-Si elle a été ajoutée à la whitelist
+Le script affichera :
 
-# 📁 Fichiers
-unban_ip.sh : script principal
-install.sh : script d’installation rapide
+* Les jails actifs
+* Si l’IP était bannie
+* Si elle a été débannie
+* Si elle a été ajoutée à la whitelist
 
-# 🔒 Prérequis
-Fail2Ban installé et actif
-Accès root (sudo)
-Utilitaires : bash, wget, grep, sed, systemctl
+---
 
-# 👤 Auteur
-# MarcGVSL
-# Global VoIP Services Ltd
-# https://voipservices.online
+## 📁 Fichiers
+
+* `unban_ip.sh` : script principal
+* `install.sh` : script d’installation rapide
+
+---
+
+## 🔒 Prérequis
+
+* Fail2Ban installé et actif
+* Accès root (`sudo`)
+* Utilitaires : `bash`, `wget`, `grep`, `sed`, `systemctl`
+
+---
+
+## 👤 Auteur
+
+**MarcGVSL**
+Global VoIP Services Ltd
+[https://voipservices.online](https://voipservices.online)
